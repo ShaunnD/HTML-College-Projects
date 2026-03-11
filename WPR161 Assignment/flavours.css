@@ -1,0 +1,188 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(images/wallpaperflare.com_wallpaper.jpg);
+}
+
+.navigation-bar {
+    background-image: linear-gradient(to right, #0D1C4C, #DA291C, #FFCC00);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.navigation-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+    text-decoration: none;
+}
+
+button {
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 5px;
+    width: 90px;
+}
+
+a:hover{
+    color: #DA291C;
+}
+
+button:hover{
+    background-color: #0D1C4C;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.logo a {
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.logo a:hover{
+    color:yellowgreen;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 80px auto 40px; /* Increased top margin to avoid nav overlap */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.flavor-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.flavor-card {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.flavor-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: scale-down;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease;
+}
+
+.flavor-card .main-image {
+    opacity: 1;
+}
+
+.flavor-card .hover-image {
+    opacity: 0;
+}
+
+.flavor-card .image-container:hover .main-image {
+    opacity: 0;
+}
+
+.flavor-card .image-container:hover .hover-image {
+    opacity: 1;
+}
+
+.flavor-card p {
+    margin-bottom: 10px;
+}
+
+.flavor-card h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 10px;
+}
+.footer {
+    background-image: linear-gradient(to right, #0D1C4C, #DA291C, #FFCC00);
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 0.7; 
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+

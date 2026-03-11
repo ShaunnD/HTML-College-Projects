@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <title>RedBull Flavor Event</title>
+</head>
+<header>
+    <nav class="navigation-bar">
+        <div class="navigation-div">
+            <div class="logo"> <a href="landing.html">RedBull</a></div>
+            <ul>
+                <li><a href="landing.html">Home</a></li>
+                <li><a href="flavours.html">New Flavours</a></li>
+                <li><a href="event.html">Event info</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="register.html">Contact</a></li>
+                <button><a href="register.html" target="_blank">Sign-In</a></button>
+                <button><a href="register.html" target="_blank">Register</a></button>
+            </ul>
+
+        </div>
+    </nav>
+
+</header>
+
+<body>
+
+    <div id="timer">
+        <h3>TIME UNTIL EVENT:</h3>
+        <p id="countdown" style="text-align: center; padding-top: 5px; margin-top: 0px;"></p>
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("jul 1, 2026 14:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in an element with id="demo"
+            document.getElementById("countdown").innerHTML = days + "D " + hours + "H "
+            + minutes + "M " + seconds + "S ";
+
+            // If the count down is over, write some text 
+            if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+        </script>
+    </div>    
+
+    <article class="mainbody">
+
+        <section id="summary">
+            <img src="images/redbull-gokart.jpeg" alt="" class="pic">
+            <h2>Ready. Set. Build!</h2>
+            <p><b>Gear up for the ultimate adrenaline rush!
+                Put your skills to the test as you design and build your very own custom go-kart, then hit the track to race for glory.
+                Join a crew of thrill-seekers and fierce competitors, all battling it out for grand prizes, bragging rights, and a coveted spot on the winner's podium.
+                Creativity, speed, and guts — do you have what it takes to claim victory?Find out by joining us on the 1st of July 2026 at 14:00.</b></p>
+        </section>
+        <section id="purpose">
+            <img src="images/redbull-candy.png" alt="" id="candy">
+            <img src="images/redbull-grape.png" alt="" id="grape">
+            <img src="images/redbull-lemon.png" alt="" id="lemon">
+            <img src="images/redbull-vanilla.png" alt="" id="vanilla">
+            <p>Get ready for an <b>electrifying experience</b> as we celebrate the launch of Red Bull’s <b>newest and most exciting flavors</b>. 
+                <b>This high-octane event is all about energy, creativity, and speed — a full-throttle day where bold taste and adrenaline collide</b>. 
+                Immerse yourself in <b>unforgettable experiences, live performances, and high-energy</b> moments that capture the spirit of Red Bull. 
+                <b>It’s more than a launch — it’s a celebration of those who live life in the fast lane</b>.</p>
+                <p><a href="#" target="_blank">CLICK HERE</a> to find out more about our exciting new flavours</p>
+            </section>
+        <section id="call">
+            <h3>Don’t miss your chance to be part of a once-in-a-lifetime experience!</h3>
+            <p><b>Tickets are going fast, and spots are limited — act now to secure yours</b>.
+                Grab your ticket online for quick access, or pick one up at the main entrance.
+                <b>Get ready to be part of an unforgettable day packed with energy, excitement, and non-stop action!</b></p>
+                <p style="text-align: center;"><a href="contact.html" target="_blank">CLICK HERE</a> to get your tickets.</p>
+            <img src="images/rebull-gates.png" alt="" id="pic">
+        </section>
+    </article>
+
+    
+</body>
+
+<footer class="footer">
+    <div class="footer-content">
+     <p>No copyright. All rights reserved.</p>
+     <div class="social-links">
+        <a href="https://www.facebook.com/redbull" target="_blank" aria-label="Follow Red Bull on Facebook"><img src="images/facebook.png" alt="Facebook Icon" class="social-icon"></a>
+        <a href="https://www.instagram.com/redbull" target="_blank" aria-label="Follow Red Bull on Instagram"><img src="images/instagram.png" alt="Instagram Icon" class="social-icon"></a>
+        <a href="https://www.tiktok.com/@redbull" target="_blank" aria-label="Follow Red Bull on TikTok"><img src="images/tiktok.png" alt="TikTok Icon" class="social-icon"></a>
+        <a href="https://www.youtube.com/user/redbull" target="_blank" aria-label="Subscribe to Red Bull on YouTube"><img src="images/youtube.png" alt="YouTube Icon" class="social-icon"></a>
+     </div>
+     </div>     
+  </footer>
+</html>
